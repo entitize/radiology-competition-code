@@ -19,9 +19,11 @@ Competition overview can be found [here](https://cs156.caltech.edu/web/challenge
 
 This was part of CS156 Spring 2022 course.
 
-## Disclaimer
-From instructor: Future CS156b students should not look at the code while taking the course
+Disclaimer from instructor: Future CS156b students should not look at the code while taking the course
 ## Basic Usage
+
+Python 3.9+
+Tensorflow 2.8.0+
 
 You can run an experiment as follows:
 ```
@@ -98,7 +100,7 @@ optional arguments:
 ```
 ## Advanced Usage
 
-We automate the deployment of multiple experiments through the using slurm.
+We automate the deployment of multiple experiments through [slurm](https://slurm.schedmd.com/).
 
 See `advanced_launcher.py` under `main`. They use configs under subdirectories
 under `jobs`.
