@@ -19,7 +19,24 @@ Competition overview can be found [here](https://cs156.caltech.edu/web/challenge
 
 This was part of CS156 Spring 2022 course.
 
-Disclaimer from instructor: Future CS156b students should not look at the code while taking the course
+*Disclaimer from instructor: Future CS156b students should not look at the code while taking the course*
+
+## Results
+
+We achieve [0.666 on solution set](https://cs156.caltech.edu/web/challenges/challenge-page/24/leaderboard)
+
+Detailed results can be found [here](https://docs.google.com/spreadsheets/d/19EHmtVX-VVpriE_OXkefz7cmxxOu8z_Dumnz4hwe2U0/edit#gid=0)
+
+TL;DR In summary, we find the following to be the best:
+- Use a specificly customized preprocessing and augmentation strategy for
+each disease category.
+- Pretraining a multilabel model on external data and then using this
+model for single label classification on some categories improves performance.
+- We run each model for a maximum of 5 epochs and average predictions from 
+and use a learning rate scheduler that decays based on validation loss and average the predictions from the best two epoch model checkpoints.
+- We do the above single model experiment 5 times, each time taking a different 80/20 split of the data
+and take the average of the results
+- For our final results, we take an ensemble of models primarily consisting of multiple EfficientNets, DenseNets, and InceptionResNets each with their own specific hyperparameter configuration.
 ## Basic Usage
 
 Python 3.9+
