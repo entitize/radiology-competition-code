@@ -119,7 +119,7 @@ optional arguments:
 
 We automate the deployment of multiple experiments through [slurm](https://slurm.schedmd.com/).
 
-See `advanced_launcher.py` under `main`. They use configs under subdirectories
+See `advanced_launcher.py`. It uses configs under subdirectories
 under `jobs`.
 
 ```
