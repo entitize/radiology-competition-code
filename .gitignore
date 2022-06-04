@@ -1,0 +1,16 @@
+data
+.vscode
+results/*
+.ipynb_checkpoints
+preprocessed_data
+*.out
+*.err
+*-jvsc-*.ipynb
+models/*
+logs/*
+__MACOSX
+*.zip
+small_dataset*
+*__pycache__*
+.DS_Store
+hp_tuning/*

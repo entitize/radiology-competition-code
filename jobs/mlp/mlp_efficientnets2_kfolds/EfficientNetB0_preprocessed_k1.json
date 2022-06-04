@@ -1,0 +1,232 @@
+{
+    "defaults": {
+        "slurm": {
+            "--account": "CS156b",
+            "--time": "7:00:00",
+            "--nodes": "1",
+            "--gres": "gpu:1",
+            "--mem_per_cpu":"4G",
+            "--requeue": "",
+            "--ntasks":3
+        },
+        "python": {
+            "--model_type": "EfficientNetB0",
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/224_data",
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--batch_size": 8,
+            "--lr_reducer_patience": 1,
+            "--use_k_folds": "",
+            "--k": 1
+        } 
+    },
+    "No Finding": {
+        "slurm": {
+        },
+        "python": {
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--nan_fill_mode": "mean",
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": "",
+            "--label_smoothing": 0.05
+        }
+    },
+    "Enlarged Cardiomediastinum": {
+        "slurm": {
+        },
+        "python": {
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug",
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--batch_size": 2,
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": ""
+        }
+    },
+    "Cardiomegaly": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_remove_diaphragm2",
+            "--generator":"aug",
+            "--batch_size": 4,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": ""
+        }
+    },
+    "Lung Opacity": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_no_diaphragm_mask",
+            "--generator":"aug",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Lung Lesion": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 5,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "mean",
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": "",
+            "--label_smoothing": 0.05
+        }
+    },
+    "Edema": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Consolidation": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--generator":"aug",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": ""
+        }
+    },
+    "Pneumonia": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+              "--batch_size": 16,
+              "--num_workers": 5,
+              "--lr_patience": 5,
+              "--nan_fill_mode": "mean",
+              "--restore_best_weights": "",
+              "--learning_rate": 0.0001,
+              "--load_pretrained": "nih_effnetB1",
+              "--remove_top": "",
+              "--label_smoothing": 0.05
+        }
+    },
+    "Atelectasis": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "mean",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": "",
+            "--label_smoothing": 0.05,
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_filters"
+        }
+    },
+    "Pneumothorax": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--generator":"aug",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Pleural Effusion": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Pleural Other": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "mean",
+            "--label_smoothing": 0.05
+        }
+    },
+    "Fracture": {
+        "slurm": {
+        },
+        "python": {
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--learning_rate": 0.0003
+        }
+    },
+    "Support Devices": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    }
+}

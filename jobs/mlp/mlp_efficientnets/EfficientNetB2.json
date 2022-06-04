@@ -1,0 +1,220 @@
+{
+    "defaults": {
+        "slurm": {
+            "--account": "CS156b",
+            "--time": "12:00:00",
+            "--nodes": "1",
+            "--gres": "gpu:1",
+            "--mem_per_cpu":"4G",
+            "--requeue": "",
+            "--ntasks":3
+        },
+        "python": {
+            "--model_type": "EfficientNetB2",
+            "--batch_size": 8,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/260_data",
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        } 
+    },
+    "No Finding": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--nan_fill_mode": "one",
+            "--load_pretrained": "nih_effnetB2",
+            "--remove_top": ""
+        }
+    },
+    "Enlarged Cardiomediastinum": {
+        "slurm": {
+        },
+        "python": {
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--batch_size": 2,
+            "--load_pretrained": "nih_effnetB2",
+            "--remove_top": ""
+        }
+    },
+    "Cardiomegaly": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 4,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB2",
+            "--remove_top": ""
+        }
+    },
+    "Lung Opacity": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Lung Lesion": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 5,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": ""
+        }
+    },
+    "Edema": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Consolidation": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB2",
+            "--remove_top": ""
+        }
+    },
+    "Pneumonia": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 5,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--load_pretrained": "nih_effnetB1",
+            "--remove_top": ""
+        }
+    },
+    "Atelectasis": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--load_pretrained": "nih_effnetB2",
+            "--remove_top": ""
+        }
+    },
+    "Pneumothorax": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Pleural Effusion": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Pleural Other": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "mean"
+        }
+    },
+    "Fracture": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    },
+    "Support Devices": {
+        "slurm": {
+        },
+        "python": {
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        }
+    }
+}

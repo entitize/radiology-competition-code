@@ -1,0 +1,108 @@
+{
+    "defaults": {
+        "slurm": {
+            "--account": "CS156b",
+            "--time": "3:00:00",
+            "--nodes": "1",
+            "--gres": "gpu:1",
+            "--mem_per_cpu":"4G",
+            "--requeue": "",
+            "--ntasks":3
+        },
+        "python": {
+            "--model_type": "ResNet50",
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/224_data",
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003
+        } 
+    },
+    "No Finding": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Enlarged Cardiomediastinum": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Cardiomegaly": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Lung Opacity": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Lung Lesion": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Edema": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Consolidation": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pneumonia": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Atelectasis": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pneumothorax": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pleural Effusion": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pleural Other": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Fracture": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Support Devices": {
+        "slurm": {
+        },
+        "python": {
+        }
+    }
+}

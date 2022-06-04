@@ -1,0 +1,153 @@
+{
+    "defaults": {
+        "slurm": {
+            "--account": "CS156b",
+            "--time": "5:00:00",
+            "--nodes": "1",
+            "--gres": "gpu:1",
+            "--mem_per_cpu":"6G",
+            "--requeue": "",
+            "--ntasks":5
+        },
+        "python": {
+            "--model_type": "EfficientNetV2S",
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--lr_reducer_patience": 1,
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/224_data",
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--batch_size": 16,
+            "--img_size": 224,
+            "--use_k_folds": "",
+            "--k": 4
+        } 
+    },
+    "No Finding": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug"
+        }
+    },
+    "Enlarged Cardiomediastinum": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug"
+        }
+    },
+    "Cardiomegaly": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_remove_diaphragm2",
+            "--generator":"aug"
+        }
+    },
+    "Lung Opacity": {
+        "slurm": {
+        },
+        "python": {
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_no_diaphragm_mask",
+            "--generator":"aug"
+        }
+    },
+    "Lung Lesion": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders"
+        }
+    },
+    "Edema": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/224_data"
+        }
+    },
+    "Consolidation": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--generator":"aug"
+        }
+    },
+    "Pneumonia": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders"
+        }
+    },
+    "Atelectasis": {
+        "slurm": {
+        },
+        "python": {
+            "--load_pretrained": "nih_pretrain_EfficientNetV2S",
+            "--remove_top": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_filters"
+        }
+    },
+    "Pneumothorax": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders",
+            "--generator":"aug"
+        }
+    },
+    "Pleural Effusion": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/224_data"
+        }
+    },
+    "Pleural Other": {
+        "slurm": {
+        },
+        "python": {
+            "--nan_fill_mode": "mean",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_original",
+            "--generator":"aug"
+        }
+    },
+    "Fracture": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/preprocessed_borders"
+        }
+    },
+    "Support Devices": {
+        "slurm": {
+        },
+        "python": {
+            "--restore_best_weights": "",
+          	"--dataset_dir": "/groups/CS156b/teams/ups_data/224_data"
+        }
+    }
+}

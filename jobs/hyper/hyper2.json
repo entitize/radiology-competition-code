@@ -1,0 +1,126 @@
+{
+    "defaults": {
+        "slurm": {
+            "--account": "CS156b",
+            "--time": "18:00:00",
+            "--nodes": "1",
+            "--gres": "gpu:1",
+            "--mem_per_cpu":"4G",
+            "--requeue":"",
+            "--ntasks":"4"
+        },
+        "python": {
+            "--model_type": "DenseNet121",
+            "--batch_size": 16,
+            "--epochs": 5,
+            "--num_workers": 5,
+            "--lr_patience": 4,
+            "--dataset_dir": "/groups/CS156b/teams/ups_data/224_data",
+            "--nan_fill_mode": "remove_nan_rows",
+            "--restore_best_weights": "",
+            "--learning_rate": 0.0003,
+            "--hp_tuning": ""
+        } 
+    },
+    "No Finding": {
+        "slurm": {
+        },
+        "python": {
+            "--nan_fill_mode": "one",
+            "--remove_top": ""
+        }
+    },
+    "Enlarged Cardiomediastinum": {
+        "slurm": {
+        },
+        "python": {
+            "--remove_top": ""
+        }
+    },
+    "Cardiomegaly": {
+        "slurm": {
+        },
+        "python": {
+            "--remove_top": ""
+        }
+    },
+    "Lung Opacity": {
+        "slurm": {
+        },
+        "python": {
+            "--learning_rate": 0.0001,
+            "--remove_top": ""
+        }
+    },
+    "Lung Lesion": {
+        "slurm": {
+        },
+        "python": {
+            "--nan_fill_mode": "mean",
+            "--remove_top": ""
+        }
+    },
+    "Edema": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Consolidation": {
+        "slurm": {
+        },
+        "python": {
+            "--remove_top": ""
+        }
+    },
+    "Pneumonia": {
+        "slurm": {
+        },
+        "python": {
+            "--remove_top": "",
+            "--nan_fill_mode": "mean"
+        }
+    },
+    "Atelectasis": {
+        "slurm": {
+        },
+        "python": {
+            "--nan_fill_mode": "mean",
+            "--remove_top": ""
+        }
+    },
+    "Pneumothorax": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pleural Effusion": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Pleural Other": {
+        "slurm": {
+        },
+        "python": {
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "mean"
+        }
+    },
+    "Fracture": {
+        "slurm": {
+        },
+        "python": {
+        }
+    },
+    "Support Devices": {
+        "slurm": {
+        },
+        "python": {
+            "--learning_rate": 0.0001,
+            "--nan_fill_mode": "mean"
+        }
+    }
+}
