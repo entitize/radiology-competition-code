@@ -23,7 +23,7 @@ This was part of CS156 Spring 2022 course.
 
 ## Results
 
-We achieve [0.666 on solution set](https://cs156.caltech.edu/web/challenges/challenge-page/24/leaderboard)
+We achieve [an average MSE of 0.666 on solution set](https://cs156.caltech.edu/web/challenges/challenge-page/24/leaderboard)
 
 Detailed results can be found [here](https://docs.google.com/spreadsheets/d/19EHmtVX-VVpriE_OXkefz7cmxxOu8z_Dumnz4hwe2U0/edit#gid=0)
 
